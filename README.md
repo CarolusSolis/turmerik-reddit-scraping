@@ -27,8 +27,8 @@ project/
 
 - Python 3.12+
 - Reddit API credentials
-- Access to Hugging Face's sentiment analysis models
-- Required Python packages (søee `requirements.txt`)
+- OpenAI API key with credits available for LLM usage
+- Required Python packages (see `requirements.txt`)
 
 ### Installation
 
