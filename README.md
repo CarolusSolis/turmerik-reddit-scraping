@@ -47,7 +47,7 @@ project/
 
 3. Configure credentials:
 
-   - Copy `config/credentials.json.example` to `config/credentials.json`
+   - Copy `config/credentials_example.json` to `config/credentials.json`
    - Add your credentials to the `credentials.json` file
 
 ### Running the Pipeline
@@ -78,7 +78,7 @@ project/
 
 ## Sample Output
 
-Please refer to the `data/` folder for sample outputs. The `generated_messages.csv` file contains the output of the final message generation step with mock trial information.
+Please refer to the `data/` folder for sample outputs. The `generated_messages.csv` file contains the output of the final message generation step with mock trial information, to evaluate the quality of the generated messages, we can compare the `text` column with the `final_message` column.
 
 
 ## Design Considerations
