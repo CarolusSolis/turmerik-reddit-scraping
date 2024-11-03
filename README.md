@@ -36,7 +36,7 @@ project/
 
    ```bash
    git clone https://github.com/CarolusSolis/turmerik-reddit-scraping.git
-   cd clinical-trial-analysis
+   cd turmerik-reddit-scraping
    ```
 
 2. Install dependencies:
