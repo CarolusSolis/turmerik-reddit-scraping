@@ -67,10 +67,10 @@ project/
    jupyter notebook notebooks/2_sentiment_analysis.ipynb
    ```
 
-3. **Message Analysis**:
+3. **User Group Analysis and Message Generation**:
 
    ```bash
-   jupyter notebook notebooks/3_message_analysis.ipynb
+   jupyter notebook notebooks/3_message_generation.ipynb
    ```
 
    - Review topic modelling results and message templates
@@ -96,27 +96,26 @@ Please refer to the `data/` folder for sample outputs. The `generated_messages.c
 1. **Data Collection** (`1_reddit_scraping.ipynb`)
 
    - PRAW-based Reddit data collection
-   - Configurable subreddit and keyword lists
-   - Code structure to support privacy-preserving data collection
+   - Configurable subreddit and keyword lists to allow for customization
+   - Code structure in place to support privacy-preserving data collection
 
 2. **Sentiment Analysis** (`2_sentiment_analysis.ipynb`)
 
-   - Utilization of pre-trained sentiment models
-   - Focus on understanding general attitudes and concerns
-   - Aggregate-level analysis to maintain privacy
+   - Utilization of pre-trained sentiment models on HuggingFace for quality and maintainability
    - Cost-effective processing for large datasets
 
-3. **Message Analysis** (`3_message_analysis.ipynb`)
+3. **User Group Analysis and Message Generation** (`3_message_generation.ipynb`)
 
-   - Topic modeling to identify common themes
-   - Analysis of frequent questions and concerns
-   - Generation of evidence-based communication guidelines
+   - Topic modeling (LDA) to identify common themes across users
+   - Analysis of frequent questions and concerns by displaying the top words in each topic
+   - Generation of evidence-based communication templates, without too much user-specific information in order to avoid over-personalization
+   - Human in the loop to review and revise templates
 
 ### Technical Decisions
 
 #### Sentiment Analysis Strategy
 
-- **Why pre-trained models for sentiment analysis instead of LLMs?**
+- **Why pre-trained sentiment analysis models instead of LLMs?**
   - Cost efficiency: LLMs would be overkill for straightforward sentiment classification
   - Scalability: The actual volume of data would be much higher in production
   - Performance: Faster processing time for large-scale analysis
